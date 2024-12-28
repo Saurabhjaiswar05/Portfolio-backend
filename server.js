@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "https://saurabhportf.netlify.app/" }));
+app.use(cors());
 
 // Define a route for the root path
 app.get('/', (req, res) => {

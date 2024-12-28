@@ -9,6 +9,10 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000" }));
 
+// Define a route for the root path
+app.get('/', (req, res) => {
+    res.send('Hello, world!'); // Or whatever response you want
+  });
 // rest api
 app.use('/api/v1',router);
 
